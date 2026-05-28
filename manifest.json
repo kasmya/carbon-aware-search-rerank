@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Green Search Reranker",
+  "version": "1.0.0",
+  "description": "Re-ranks search results to favour green-hosted websites using a contextual bandit.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.google.com/*",
+    "*://*.bing.com/*",
+    "*://*.duckduckgo.com/*",
+    "https://api.thegreenwebfoundation.org/*"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/search*",
+        "*://*.bing.com/*",
+        "*://*.duckduckgo.com/*"
+      ],
+      "js": ["src/content/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Green Search"
+  }
+}

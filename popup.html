@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Green Search Reranker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h3>🌿 Green Search Reranker</h3>
+      <div class="badge-container">
+        <span class="status-badge" id="statusBadge">Active</span>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-row">
+        <span class="label">Mode:</span>
+        <span class="value" id="condition">—</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Green sites boosted:</span>
+        <span class="value" id="greenCount">—</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Total logs stored:</span>
+        <span class="value" id="logCount">—</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="exportBtn" class="btn btn-primary">📥 Export Logs</button>
+      <button id="clearBtn" class="btn btn-secondary">🗑️ Clear Logs</button>
+    </div>
+
+    <div class="footer-note">
+      🌱 Nudging you toward greener websites.
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
