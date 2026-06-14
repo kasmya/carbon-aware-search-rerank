@@ -88,27 +88,24 @@ Therefore the review emphasizes “transferable primitives”:
 > Note: r1–r13 in this workspace are carbon-aware system/web/AI papers rather than SERP bandit papers. Hence, the highest similarity appears in r1 (reranking utility), and evaluation alignment appears in r3 and r7.
 
 | r-index | Paper title/theme | Carbon signal used | Decision mechanism | Online adaptation | Privacy focus | Trade-off constraint concept | Publisher | Similarity (0–5) | What it teaches you (writing-ready) |
-|---:|---|---|---|---|---|---|---|---:|---|
-
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | r1 | Carbon Footprint‑Aware Recommenders for Greener Items | Item CO₂e / greenness scale | Utility-based reranking | Mostly static parameter tuning | None | Accuracy vs greenness utility | (publisher not extracted) | 4 | Reranking utility design: your “boost” is a special case of tunable utility blending. |
-
-| r2 | Carbon Aware E‑Commerce measurement + eco-mode mitigation | SCI + grid intensity + RUM | Intervention switching (eco-mode) | Yes (region/time adaptive) | None | Emissions reduction without conversion/UX harm | 2 | Shows how to perform real-world measurement and implement guardrails akin to relevance. |
-| r3 | Carbon-aware evaluation metrics for recommenders (SDG-aligned) | Carbon/energy + social/econ metrics | Evaluation framework | No | None | Multi-objective trade-offs | 3 | Provides a metric taxonomy you can adapt into SERP metrics (G‑CTR, carbon exposure). |
-| r4 | Carbon-aware neural architecture search (CAS-NAS) | Inference energy + temporal carbon intensity | Multi-objective search + runtime adaptation | Yes | None | Accuracy vs energy/carbon | 2 | Pattern: multi-objective optimization with runtime selection under carbon forecasts. |
-| r5/r11 | Clover: carbon-aware ML inference with mixed models + GPU partitioning | Inference energy + latency SLA | Online config selection | Yes | None | Latency SLA + accuracy loss bounds | 2 | Template for constraints + tail-latency-aware switching; analogous to relevance guardrails. |
-| r6 | Carbon-aware continuous learning (CCL) | Operational carbon from retraining | RL reconfiguration policy | Yes | None | Accuracy vs carbon under drift | 2 | Pattern: feedback-driven adaptive policies under carbon constraints. |
-| r7 | AI‑CARE reporting framework | FLOPs/memory/static power → CO₂ | Reporting/score curves | No | None | Carbon–performance trade-off reporting | 1–2 | Helps you justify measurement methodology and reporting structure. |
-| r8 | Agile pathway toward carbon-aware clouds | Organizational/operational principles | Governance + workflow | Indirect | None | Actionable visibility + configurability | 1 | Helps deployment narrative: how to operationalize extension-level eco policies. |
-| r9 | Green SEO literature review | Energy/carbon effects of web design | Review (not policy) | No | None | SEO relevance vs sustainability | 1 | Indirect support: sustainable UX can preserve discovery quality. |
-| r10 | CASPER carbon-aware scheduling/routing | Carbon intensity + latency SLO | Routing/provisioning optimization | Yes | None | Latency SLO vs carbon | 2 | Conceptual bridge: “routing attention” to greener endpoints with performance constraints. |
-| r12 | GreenShield low-carbon cybersecurity | Energy + carbon forecast scheduling | Multi-mechanism optimization (may include FL) | Indirect | Possibly FL-related privacy, but not user-click privacy | Accuracy vs energy/carbon | 1 | Shows combining learning + carbon-aware scheduling in security systems. |
-| r13 | Carbon-aware resource allocation with renewable availability (CAC) | Renewable availability + carbon intensity | Carbon-aware scheduling in distributed compute | Yes | None | Latency vs emissions trade-offs; job flexibility classes | 2 | Gives a scheduling/assignment analogy: when flexibility exists, align work with low-carbon windows. |
+| r2 | Carbon Aware E‑Commerce measurement + eco-mode mitigation | SCI + grid intensity + RUM | Intervention switching (eco-mode) | Yes (region/time adaptive) | None | Emissions reduction without conversion/UX harm | | 2 | Shows how to perform real-world measurement and implement guardrails akin to relevance. |
+| r3 | Carbon-aware evaluation metrics for recommenders (SDG-aligned) | Carbon/energy + social/econ metrics | Evaluation framework | No | None | Multi-objective trade-offs | | 3 | Provides a metric taxonomy you can adapt into SERP metrics (G‑CTR, carbon exposure). |
+| r4 | Carbon-aware neural architecture search (CAS-NAS) | Inference energy + temporal carbon intensity | Multi-objective search + runtime adaptation | Yes | None | Accuracy vs energy/carbon | | 2 | Pattern: multi-objective optimization with runtime selection under carbon forecasts. |
+| r5/r11 | Clover: carbon-aware ML inference with mixed models + GPU partitioning | Inference energy + latency SLA | Online config selection | Yes | None | Latency SLA + accuracy loss bounds | | 2 | Template for constraints + tail-latency-aware switching; analogous to relevance guardrails. |
+| r6 | Carbon-aware continuous learning (CCL) | Operational carbon from retraining | RL reconfiguration policy | Yes | None | Accuracy vs carbon under drift | | 2 | Pattern: feedback-driven adaptive policies under carbon constraints. |
+| r7 | AI‑CARE reporting framework | FLOPs/memory/static power → CO₂ | Reporting/score curves | No | None | Carbon–performance trade-off reporting | | 1–2 | Helps you justify measurement methodology and reporting structure. |
+| r8 | Agile pathway toward carbon-aware clouds | Organizational/operational principles | Governance + workflow | Indirect | None | Actionable visibility + configurability | | 1 | Helps deployment narrative: how to operationalize extension-level eco policies. |
+| r9 | Green SEO literature review | Energy/carbon effects of web design | Review (not policy) | No | None | SEO relevance vs sustainability | | 1 | Indirect support: sustainable UX can preserve discovery quality. |
+| r10 | CASPER carbon-aware scheduling/routing | Carbon intensity + latency SLO | Routing/provisioning optimization | Yes | None | Latency SLO vs carbon | | 2 | Conceptual bridge: “routing attention” to greener endpoints with performance constraints. |
+| r12 | GreenShield low-carbon cybersecurity | Energy + carbon forecast scheduling | Multi-mechanism optimization (may include FL) | Indirect | Possibly FL-related privacy, but not user-click privacy | Accuracy vs energy/carbon | | 1 | Shows combining learning + carbon-aware scheduling in security systems. |
+| r13 | Carbon-aware resource allocation with renewable availability (CAC) | Renewable availability + carbon intensity | Carbon-aware scheduling in distributed compute | Yes | None | Latency vs emissions trade-offs; job flexibility classes | | 2 | Gives a scheduling/assignment analogy: when flexibility exists, align work with low-carbon windows. |
 | r14 | Top-K ranking deep contextual bandits for information selection (Top-K CMAB + deep learning) | Relevance / reward (utility) from user feedback | Contextual multi-armed bandit for top-K selection with deep reward approximation | Yes (online learning over rounds) | None (not framed as privacy-preserving for user signals) | Regret minimization; optimal top-K under reward complexity | arXiv:2201.13287v1 (Systems) | 4 | Closest match to your contextual bandit SERP framing: defines top-K selection as bandit ranking, enabling “boost levels” mapped to arms. |
 | r15 | LLMs-augmented contextual bandit (LLM encoder + bandit decision) | Reward derived from bandit feedback; context representation enriched by LLM embeddings | Contextual bandit with LLM latent encoding of context | Yes (improves cumulative reward / reduces regret) | None (no explicit privacy model for client-side learning) | Regret/cumulative reward optimization | arXiv:2311.02268v1 | 4 | Directly supports richer contextual features for your bandit (LLM embeddings as context encoder) while staying within bandit learning and evaluation. |
 | r16 | Trust-Aware Federated User Representation Learning for Privacy-Preserving and Carbon-Optimized Personalized Recommendation in Large-Scale Social Platforms | Carbon-aware federated optimization + carbon budgets; trust-weighted aggregation; embeddings | Trust-aware federated aggregation + carbon-budget-constrained optimization | Yes (adaptive trust weighting / carbon budget constraints across rounds) | Privacy via encrypted updates / federated learning | Communication/energy–accuracy trade-offs under strict carbon budgets | Springer (via DOI: 10.1007/s44230-026-00145-6) | 2 | Provides a privacy + carbon-aware personalization template (trust-weighted FL under carbon budgets) that can inspire client-side/edge-side privacy narratives. |
 | r17 | Exploring the Benefits of Carbon-Aware Routing (CATE) | Link carbon intensity + dynamic router power + port power down | Carbon-aware traffic engineering heuristic | Indirect (routing reacts to carbon intensity and power state) | Not a user-privacy model | Limits/optimizes carbon via link-cost definitions (no “CTR” guardrail) | Zenodo/Preprint (via DOI: 10.5281/zenodo.10035068) | 1 | Supports the “routing attention to greener endpoints” analogy, but not SERP bandit learning. |
 | r18 | Carbon-Aware AI Control Plane for DevOps Automation: A Reference Architecture and Next-Generation Sustainability Framework | Predictive carbon intelligence + temporal decision logic + sustainability guardrails | Carbon-aware control-plane for autoscaling/deployment/rollback | Yes (policy-defined temporal decisions) | Not user-privacy; org-level governance | Policy-defined sustainability guardrails for operational actions | IEEE ACCESS (DOI: 10.1109/ACCESS.2026.3656467) | 1 | Strengthens deployment/governance narrative: sustainability as a first-class control input with guardrails. |
-
 
 ---
 
@@ -420,6 +417,26 @@ A conceptual writing bridge:
 
 ### r15 — LLMs-augmented Contextual Bandit
 
+#### 4.42 Contribution summary
+r15 integrates large language models (LLMs) with contextual bandit decision-making by using LLM encoders to create dense, informative representations of complex contexts. The approach is motivated by the challenge that raw contextual features can be noisy, high-dimensional, or difficult to exploit directly using traditional bandit models.
+
+From the extracted text, r15’s key ideas include:
+- using an LLM as an encoder to map context c to a latent embedding e(c),
+- feeding the embedding into the contextual bandit as the decision-relevant context,
+- evaluating on synthetic datasets and reporting improvements such as higher cumulative rewards and reduced regret relative to traditional bandit baselines,
+- providing practical notes on computation/latency for encoding and bandit action selection.
+
+#### 4.43 Transferable patterns to your SERP bandit idea
+r15 is directly useful for your contextual bandit design because it suggests a method to enrich the bandit’s context representation.
+
+Transferable design takeaways:
+1. **Richer context representations:** for SERP reranking, “context” can include query text, snippet/title semantics, and domain-related information; LLM encodings can turn these into dense features that the bandit can use to select boost actions more effectively.
+2. **Bandit learning remains the controller:** the novelty is not replacing bandits with pure RL; rather, it uses LLMs to improve context representations while keeping bandit-style decision learning and regret-style evaluation.
+3. **Evaluation with cumulative reward/regret:** your system can similarly report learning curves (cumulative green reward and relevance guardrail satisfaction) as the bandit learns.
+
+#### 4.44 Writing template paragraph
+“r15 improves contextual bandits under complex contexts by using LLM embeddings as a compact, semantically rich context encoder. This is relevant to our SERP reranking setting, where the policy needs to condition on high-dimensional signals derived from queries and result metadata. Rather than relying on hand-crafted features only, we can adopt the r15 idea to enrich contextual representations, enabling more accurate selection of reranking actions. Importantly, the bandit remains the decision-learning framework, allowing us to preserve the feedback-driven, online adaptation mechanism central to our privacy-preserving design.”
+
 ### r16 — Trust-Aware Federated User Representation Learning for Privacy-Preserving and Carbon-Optimized Personalized Recommendation in Large-Scale Social Platforms
 
 #### 4.45 Contribution summary
@@ -477,25 +494,3 @@ The paper introduces:
 
 #### 4.53 Writing template paragraph
 “r18 formalizes carbon awareness as a first-class decision input in DevOps automation via a dedicated control plane layer with predictive carbon intelligence and policy-defined sustainability guardrails. This directly informs our system design narrative: SERP reranking can be cast as a control loop that optimizes sustainability objectives under explicit relevance constraints. The reference architecture emphasizes governance and validation, which we mirror through our client-side evaluation metrics (green CTR, overall CTR non-inferiority, and carbon exposure).”
-
-
-#### 4.42 Contribution summary
-r15 integrates large language models (LLMs) with contextual bandit decision-making by using LLM encoders to create dense, informative representations of complex contexts. The approach is motivated by the challenge that raw contextual features can be noisy, high-dimensional, or difficult to exploit directly using traditional bandit models.
-
-From the extracted text, r15’s key ideas include:
-- using an LLM as an encoder to map context c to a latent embedding e(c),
-- feeding the embedding into the contextual bandit as the decision-relevant context,
-- evaluating on synthetic datasets and reporting improvements such as higher cumulative rewards and reduced regret relative to traditional bandit baselines,
-- providing practical notes on computation/latency for encoding and bandit action selection.
-
-#### 4.43 Transferable patterns to your SERP bandit idea
-r15 is directly useful for your contextual bandit design because it suggests a method to enrich the bandit’s context representation.
-
-Transferable design takeaways:
-1. **Richer context representations:** for SERP reranking, “context” can include query text, snippet/title semantics, and domain-related information; LLM encodings can turn these into dense features that the bandit can use to select boost actions more effectively.
-2. **Bandit learning remains the controller:** the novelty is not replacing bandits with pure RL; rather, it uses LLMs to improve context representations while keeping bandit-style decision learning and regret-style evaluation.
-3. **Evaluation with cumulative reward/regret:** your system can similarly report learning curves (cumulative green reward and relevance guardrail satisfaction) as the bandit learns.
-
-#### 4.44 Writing template paragraph
-“r15 improves contextual bandits under complex contexts by using LLM embeddings as a compact, semantically rich context encoder. This is relevant to our SERP reranking setting, where the policy needs to condition on high-dimensional signals derived from queries and result metadata. Rather than relying on hand-crafted features only, we can adopt the r15 idea to enrich contextual representations, enabling more accurate selection of reranking actions. Importantly, the bandit remains the decision-learning framework, allowing us to preserve the feedback-driven, online adaptation mechanism central to our privacy-preserving design.”
-
