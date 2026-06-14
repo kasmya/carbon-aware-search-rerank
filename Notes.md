@@ -73,7 +73,7 @@ Contextual bandits are a type of reinforcement learning algorithm that balances 
 | RQ6 | Category-wise CTR lift, fairness disparity | No category worse than -10% CTR |
 
 ---
-# Required Numbers, Plots, Diagrams, and Statistics
+# Required Numbers, Plots, Diagrams, and Statistics (Extended List)
 
 This section lists all quantitative outputs needed to answer the research questions and demonstrate novelty.
 
