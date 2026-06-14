@@ -1,5 +1,5 @@
 # Novelty 1: Client-side, click-rewarded learning for carbon-aware ranking
-a search ranking system that learns directly from user interactions (like clicks) on the user’s own device, while also optimizing for sustainability. Let’s break it down:
+a search ranking system that learns directly from user interactions (like clicks) on the user’s own device, while also optimizing for sustainability. 
 
 # Novelty 2: Contextual bandits for SERP-level green boosting
 
