@@ -403,7 +403,3 @@ The r1–r12 literature establishes that sustainability can be measurable and op
 11. r12 — GreenShield (low-carbon cybersecurity framework).
 12. r13 — (needs extraction from r13.pdf).
 
----
-## user notes
-
-Contextual bandits are a type of reinforcement learning algorithm that balances exploration and exploitation while making decisions based on contextual information (like user features or environment state). They are widely used in personalization tasks such as online advertising, recommendation systems, and adaptive clinical trials.
