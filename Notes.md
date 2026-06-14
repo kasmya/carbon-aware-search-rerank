@@ -16,3 +16,17 @@ Contextual bandits are a type of reinforcement learning algorithm that balances 
 - Relevance guardrails → Ensuring that the search results remain highly relevant to the user’s query. Guardrails prevent sustainability signals from overwhelming or distorting the core relevance ranking.
 - Carbon optimization → Adjusting ranking or re-ranking to favor results that are more environmentally sustainable (e.g., hosted in greener data centers, lower carbon footprint).
 - Single loop → Instead of treating relevance and carbon optimization as separate stages (first relevance, then sustainability re-ranking), the algorithm integrates both into one unified decision-making loop.
+
+## The Strongest Evidence for Novelty: A Direct Comparison Matrix
+
+| Feature | r1 | r2 | r4 | r5 | r6 | r10 | r12 | **YOUR SYSTEM** |
+|---------|----|----|----|----|----|-----|-----|-----------------|
+| SERP/search reranking | ✓ (recs) | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| Carbon-aware objective | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | **✓** |
+| Online/adaptive learning | ✗ | ✗ | ✓* | ✓* | ✓ | ✓* | ✓* | **✓** (bandits) |
+| Click/user reward signal | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+| Privacy-preserving (client-side) | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ~(FL) | **✓** (enforced) |
+| Relevance guardrail/constraint | ✓ | ~(conv) | ✓ | ✓ | ✓ | ✓ | ✓ | **✓** (CTR non-inf) |
+| **All 6 features together** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | **✓** |
+
+> **Note:** r4, r5, r6, r10, r12 have online adaptation but for different objectives (model selection, scheduling, retraining frequency). None combine SERP reranking, click reward, and privacy-preserving learning.
