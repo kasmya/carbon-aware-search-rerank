@@ -86,18 +86,3 @@
 | News | -0.5% | +10 |
 | Shopping | -0.8% | +11 |
 | Informational | +0.2% | +10 |
-
----
-
-## 5. Minimal Code Outputs Checklist
-results/
-├── metrics.csv (per-query: reward, regret, carbon)
-├── plots/
-│ ├── regret_curve.png
-│ ├── gctr_over_time.png
-│ ├── pareto.png
-│ └── ablation.png
-├── tables/
-│ ├── main_results.tex
-│ └── ablation.tex
-└── stats_test_results.json
